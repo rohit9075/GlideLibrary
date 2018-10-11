@@ -6,6 +6,10 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 
+import com.bumptech.glide.Glide;
+
+import static java.security.AccessController.getContext;
+
 public class MainActivity extends AppCompatActivity {
 
     private Button mButtonDownloadImage;
@@ -25,6 +29,7 @@ public class MainActivity extends AppCompatActivity {
 
                 GlideApp.with(MainActivity.this)
                         .load("https://www.mayflower.in/uploads/product/gallery/thumbs/400_400_20170620174927255028.jpg")
+                        .placeholder(R.drawable.image_placeholder)
                         .into(mImageView);
 
             }
